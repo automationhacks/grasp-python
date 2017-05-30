@@ -1,0 +1,6 @@
+# Discussion:
+# The second problem with index_words is that it requires all results to
+# be stored in the list before being returned. For huge inputs, this can
+# cause your program to run out of memory and crash. In contrast, a
+# generator version of this function can easily be adapted to take inputs
+# of arbitrary length.

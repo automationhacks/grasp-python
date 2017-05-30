@@ -1,0 +1,4 @@
+{
+  "11_fixture_modularity_test.py::test_smtp_exists[mail.python.org]": true,
+  "11_fixture_modularity_test.py::test_smtp_exists[smtp.gmail.com]": true
+}

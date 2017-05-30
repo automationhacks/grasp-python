@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="1" failures="7" name="pytest" skips="0" tests="16" time="0.243"><testcase classname="1_basic_test" file="1_basic_test.py" line="6" name="test_wrong_answer" time="0.0070421695709228516"><failure message="assert 4 == 5
+ +  where 4 = inc(3)">def test_wrong_answer():
+&gt;       assert inc(3) == 5
+E       assert 4 == 5
+E        +  where 4 = inc(3)
+
+1_basic_test.py:8: AssertionError</failure></testcase><testcase classname="1_basic_test" file="1_basic_test.py" line="10" name="test_correct_answer" time="0.0019996166229248047"></testcase><testcase classname="2_exception_test" file="2_exception_test.py" line="10" name="test_foo" time="0.0010004043579101562"></testcase><testcase classname="3_grouping_test.TestClass" file="3_grouping_test.py" line="11" name="test_one" time="0.0010001659393310547"></testcase><testcase classname="3_grouping_test.TestClass" file="3_grouping_test.py" line="15" name="test_second" time="0.0010294914245605469"><failure message="AssertionError: assert False
+ +  where False = hasattr(&apos;hello&apos;, &apos;check&apos;)">self = &lt;python_mods.pytest_demo.3_grouping_test.TestClass object at 0x045C8A90&gt;
+
+    def test_second(self):
+        x = &apos;hello&apos;
+&gt;       assert hasattr(x, &apos;check&apos;)
+E       AssertionError: assert False
+E        +  where False = hasattr(&apos;hello&apos;, &apos;check&apos;)
+
+3_grouping_test.py:18: AssertionError</failure></testcase><testcase classname="3_grouping_test" file="3_grouping_test.py" line="20" name="test_three" time="0.002001047134399414"><failure message="assert 0">def test_three():
+&gt;       assert 0  # demo purposes
+E       assert 0
+
+3_grouping_test.py:22: AssertionError</failure></testcase><testcase classname="4_fixture_basic_test" file="4_fixture_basic_test.py" line="6" name="test_needs_files" time="0.010970830917358398"><failure message="assert 0">tmpdir = local(&apos;C:\\Users\\gsingh\\AppData\\Local\\Temp\\pytest-of-gsingh\\pytest-13\\test_needs_files0&apos;)
+
+    def test_needs_files(tmpdir):
+        print(tmpdir)
+&gt;       assert 0
+E       assert 0
+
+4_fixture_basic_test.py:9: AssertionError</failure><system-out>C:\Users\gsingh\AppData\Local\Temp\pytest-of-gsingh\pytest-13\test_needs_files0
+</system-out></testcase><testcase classname="test_fixtures_module_level" file="test_fixtures_module_level.py" line="10" name="test_current_date" time="0.002005338668823242"><failure message="assert 0">get_cur_date = datetime.datetime(2017, 5, 29, 21, 56, 46, 721926)
+
+    def test_current_date(get_cur_date):
+        assert get_cur_date
+&gt;       assert 0  # for demo purposes
+E       assert 0
+
+test_fixtures_module_level.py:13: AssertionError</failure></testcase><testcase classname="test_fixtures_module_level" file="test_fixtures_module_level.py" line="15" name="test_another_date" time="0.0019996166229248047"><failure message="assert 0">get_cur_date = datetime.datetime(2017, 5, 29, 21, 56, 46, 721926)
+
+    def test_another_date(get_cur_date):
+        assertpy.assert_that(get_cur_date is not None)
+&gt;       assert 0  # again for demo
+E       assert 0
+
+test_fixtures_module_level.py:18: AssertionError</failure></testcase><testcase classname="test_pytest_fixtures" file="test_pytest_fixtures.py" line="9" name="test_current_date" time="0.0020003318786621094"><failure message="assert 0">get_cur_date = datetime.datetime(2017, 5, 29, 21, 56, 46, 740927)
+
+    def test_current_date(get_cur_date):
+        assert get_cur_date
+&gt;       assert 0  # for demo purposes
+E       assert 0
+
+test_pytest_fixtures.py:12: AssertionError</failure></testcase><testcase classname="test_pytest_markers" file="test_pytest_markers.py" line="3" name="test_send_http" time="0.0009894371032714844"></testcase><testcase classname="test_pytest_markers" file="test_pytest_markers.py" line="8" name="test_something_quick" time="0.0010061264038085938"></testcase><testcase classname="test_pytest_markers" file="test_pytest_markers.py" line="12" name="test_another" time="0.0010008811950683594"></testcase><testcase classname="test_pytest_markers.TestClass" file="test_pytest_markers.py" line="17" name="test_method" time="0.001007080078125"></testcase><testcase classname="test_someenv" file="test_someenv.py" line="3" name="test_basic_db_operations" time="0.0009999275207519531"></testcase><testcase classname="sub_dir.test_module" file="sub_dir\test_module.py" line="25" name="test_bar" time="0.003997325897216797"><error message="test setup failure">file C:\Users\gsingh\Dropbox\Technical\Python\TheLearnPythonProject\python_mods\pytest_demo\sub_dir\test_module.py, line 26
+  def test_bar(bar):
+E       fixture &apos;bar&apos; not found
+&gt;       available fixtures: _skip_sensitive, _verify_url, base_url, cache, capabilities, capfd, capsys, clean_test_db, doctest_namespace, driver, driver_class, driver_kwargs, driver_path, firefox_options, firefox_path, firefox_profile, metadata, monkeypatch, pytestconfig, record_xml_property, recwarn, selenium, sensitive_url, session_capabilities, setup_function, setup_module, test_db, tmpdir, tmpdir_factory, variables, worker_id
+&gt;       use &apos;pytest --fixtures [testpath]&apos; for help on them.
+
+C:\Users\gsingh\Dropbox\Technical\Python\TheLearnPythonProject\python_mods\pytest_demo\sub_dir\test_module.py:26</error></testcase></testsuite>

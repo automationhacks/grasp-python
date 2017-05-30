@@ -1,0 +1,16 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.planview.com/PlanviewEnterprise/Services/ProjectService3/2012/08" xmlns:ns1="http://schemas.planview.com/PlanviewEnterprise/OpenSuite/Dtos/ProjectDto2/2012/08" xmlns:plan="http://schemas.datacontract.org/2004/07/Planview.Enterprise.OpenSuite.Dtos.Configuration">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<ns:Create>
+			<ns:dtos>
+				<ns1:ProjectDto2>
+					<ns1:Description> </ns1:Description>
+					<ns1:FatherKey> </ns1:FatherKey>
+					{%- if lcycle %}
+					<ns1:LifecycleAdminUserKey> </ns1:LifecycleAdminUserKey>
+					{%- endif %}
+				</ns1:ProjectDto2>
+			</ns:dtos>
+		</ns:Create>
+	</soapenv:Body>
+</soapenv:Envelope>

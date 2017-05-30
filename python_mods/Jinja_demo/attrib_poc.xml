@@ -1,0 +1,17 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.planview.com/PlanviewEnterprise/Services/IAttributeService2/2012/08" xmlns:ns1="http://schemas.planview.com/PlanviewEnterprise/OpenSuite/Dtos/EntityAttributeDto2/2013/04" xmlns:ns2="http://schemas.planview.com/PlanviewEnterprise/OpenSuite/Dtos/AttributeServiceSetOptionsDto/2015/09" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:Set>
+         <ns:dtos>
+            {% for n in range(4) %}
+            <ns1:EntityAttributeDto2>
+                <ns1:DeleteValue>{{ }} </ns1:DeleteValue>
+               <ns1:EntityKey> </ns1:EntityKey>
+               <ns1:Id> </ns1:Id>
+               <ns1:Value xsi:type="xs:string"> </ns1:Value>
+            </ns1:EntityAttributeDto2>
+            {% endfor %}
+         </ns:dtos>
+      </ns:Set>
+   </soapenv:Body>
+</soapenv:Envelope>

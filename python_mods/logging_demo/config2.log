@@ -1,0 +1,6 @@
+2017-05-22 15:28:16,569 - example - INFO - program started
+2017-05-22 15:28:16,569 - example.other_mod_2.add - INFO - added 10 and 20 to get 30
+2017-05-22 15:28:16,569 - example - INFO - done!
+2017-05-29 23:00:19,525 - example - INFO - program started
+2017-05-29 23:00:19,526 - example.other_mod_2.add - INFO - added 10 and 20 to get 30
+2017-05-29 23:00:19,527 - example - INFO - done!

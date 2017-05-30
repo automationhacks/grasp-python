@@ -1,0 +1,12 @@
+INFO:root:info message
+ERROR:root:error message
+ERROR:ex:Error 
+Traceback (most recent call last):
+  File "C:/Users/gsingh/Dropbox/Technical/Python/TheLearnPythonProject/python_mods/logging_demo/ex_2.py", line 7, in <module>
+    raise RuntimeError
+RuntimeError
+ERROR:ex:Error!!!
+Traceback (most recent call last):
+  File "C:/Users/gsingh/Dropbox/Technical/Python/TheLearnPythonProject/python_mods/logging_demo/ex_2.py", line 7, in <module>
+    raise RuntimeError
+RuntimeError
