@@ -7,6 +7,7 @@ class App(object):
         self.smtp = smtp6
 
 
+# parametrized fixture
 @pytest.fixture(scope='function', params=['smtp.gmail.com', 'mail.python.org'])
 def smtp(request):
     smtp = smtplib.SMTP(request.param)
@@ -15,11 +16,13 @@ def smtp(request):
     smtp.close()
 
 
+# fixture using an existing fixture
 @pytest.fixture(scope='function')
 def app(smtp):
     return App(smtp)
 
 
+# test code
 def test_smtp_exists(app):
     assert app.smtp
     assert 0
