@@ -1,0 +1,17 @@
+PVE-83253:
+  {setup_data:
+    [{'Project': {'father_key': 'key://2/$Plan/17'}},
+     {'Task': {'father_key': '', 'name': 'ui_task'}},
+     {'Allocation': {'work_key': '', 'res_key': 'key://2/$Res/11215', 'start_date': 2016-09-02, 'finish_date': 2016-11-25, 'remaining_effort': 20}},
+     {'Reserve': {'work_key': '', 'res_key': 'key://2/$Res/11215', 'start_date': 2016-09-02, 'finish_date': 2016-11-25, 'remaining_effort': 20}}
+     ],
+  filter_text: anything#,
+  week_dates: ['2/14/2016', '2/21/2016'],
+  month_dates: ['2/1/2016', '3/1/2016'],
+  preferences: {
+  gantt_options: {'Milestones': True, 'Constraints': False, 'Relationships Out Of Project': True},
+  effort_options: {'Display Allocations with No Remaining Effort': True, 'Display Resource-Utilization Bars': False, 'Reserves': False}
+  },
+  action_menu_options: { row: 1, wbs_name: '', option: 'Task Information...'},
+  resource_name: 'Patrick Allen'
+  }
