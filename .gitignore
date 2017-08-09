@@ -101,5 +101,6 @@ ENV/
 .mypy_cache/
 
 # custom
-.idea
+.idea/
 *.pyc
+*.iml
