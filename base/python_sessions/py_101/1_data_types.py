@@ -23,10 +23,9 @@
 
 the_string = 'Hello World!'
 
-print(the_string)          # Prints complete string
-print(the_string[0])       # Prints first character of the string
-print(the_string[2:5])     # Prints characters starting from 3rd to 5th
-print(the_string[2:])      # Prints string starting from 3rd character
-print(the_string * 2)      # Prints string two times
-print(the_string + "TEST") # Prints concatenated string
-
+print(the_string)  # Prints complete string
+print(the_string[0])  # Prints first character of the string
+print(the_string[2:5])  # Prints characters starting from 3rd to 5th
+print(the_string[2:])  # Prints string starting from 3rd character
+print(the_string * 2)  # Prints string two times
+print(the_string + "TEST")  # Prints concatenated string

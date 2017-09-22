@@ -24,6 +24,7 @@
 
 with open('text.txt', mode='r', encoding='utf-8') as f:
     print(f.read(5))  # Reads first 5 characters in file
+    print('=' * 10)
     print(f.read())  # Reads entire file
 
 

@@ -4,6 +4,6 @@ def greet(name, msg='Good morning!'):
     """
     print('Hello %s! %s' % (name, msg))
 
+
 greet('Gaurav')
 greet('Gaurav', 'How are you buddy?')
-

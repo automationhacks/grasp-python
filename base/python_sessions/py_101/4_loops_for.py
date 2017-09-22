@@ -1,7 +1,7 @@
 list_digits = list(range(5))
 print(list_digits)
 
-num = int(input('Enter a no\n'))
+num = int(input('Enter a no: '))
 
 for i in list_digits:
     if num == i:

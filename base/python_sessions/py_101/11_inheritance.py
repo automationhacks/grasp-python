@@ -1,5 +1,5 @@
 class Animal:
-    def __init__(self, name):    # Constructor of the class
+    def __init__(self, name):  # Constructor of the class
         self.name = name
 
     def talk(self):
@@ -14,6 +14,7 @@ class Cat(Animal):
 class Dog(Animal):
     def talk(self):
         return 'Woof! Woof!'
+
 
 animals = [Cat('Missy'), Cat('Mr. Mistoffelees'), Dog('Lassie')]
 

@@ -1,11 +1,11 @@
 class ComplexNumbers:
-
     def __init__(self, r=0, i=0):
         self.real = r
         self.imag = i
 
     def get_complex_num(self):
         return '%s+%sj' % (self.real, self.imag)
+
 
 c1 = ComplexNumbers(1, 3)  # First Object
 print(c1.get_complex_num())

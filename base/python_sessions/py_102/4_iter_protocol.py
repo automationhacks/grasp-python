@@ -1,10 +1,11 @@
 # func firstn to represent all non negative nos till n
 
-#
-# def firstn(n):
-#     return [num for num in range(n)]
-#
-# print(firstn(20))
+
+def firstn(n):
+    return [num for num in range(n)]
+
+
+print(firstn(20))
 
 
 class FirstN(object):
@@ -19,13 +20,11 @@ class FirstN(object):
 
     def next(self):
         if self.num < self.n:
-            cur, self.num = self.num, self.num+1
+            cur, self.num = self.num, self.num + 1
             return cur
         else:
             raise StopIteration()
 
+
 sum_of_first_n = sum(FirstN(10))
 print(sum_of_first_n)
-
-
-
