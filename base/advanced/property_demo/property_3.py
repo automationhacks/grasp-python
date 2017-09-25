@@ -22,6 +22,7 @@ class Celsius:
     temperature = property(get_temperature, set_temperature)  # This converts methods as property object
     # i.e. attaches some code to member attribute accesses (temperature)
 
+
 if __name__ == '__main__':
     c = Celsius()  # Calls the setter implicitly
 
@@ -34,5 +35,3 @@ if __name__ == '__main__':
 
     # Finally note that, the actual temperature value is stored in the private variable _temperature.
     # The attribute temperature is a property object which provides interface to this private variable.
-
-

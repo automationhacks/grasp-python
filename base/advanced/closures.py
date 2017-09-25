@@ -26,7 +26,6 @@ Theory:
     or the function itself is removed from the current namespace
 """
 
-
 # def print_msg(msg):
 #     def printer():
 #         print(msg)
@@ -48,15 +47,16 @@ Theory:
     It can also provide an object oriented solution to the problem when there is only few methods to be implemented
 """
 
+
 # Ex 3: Sample use case for closure implementation
 
 
 def make_multiplier(n):
-
     def multiplier(x):
         return x * n
 
     return multiplier
+
 
 times3 = make_multiplier(3)
 times5 = make_multiplier(5)
