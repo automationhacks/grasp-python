@@ -101,6 +101,9 @@ ENV/
 .mypy_cache/
 
 # custom
-.idea/
 *.pyc
 *.iml
+
+# Editor specific files
+.vscode/
+.idea/
