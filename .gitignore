@@ -107,3 +107,6 @@ ENV/
 # Editor specific files
 .vscode/
 .idea/
+
+# Pytest related files
+.pytest_cache/

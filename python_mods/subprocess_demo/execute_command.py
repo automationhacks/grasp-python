@@ -6,7 +6,7 @@ from pathlib import Path
 
 BASE_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..\\..\\')
 SCREENSHOT_PATH = BASE_PATH + 'tests\\ui\\screenshots'
-WEBSITE_STATIC_PATH = BASE_PATH + 'website\\app\\static\\images\\'
+WEBSITE_STATIC_PATH = BASE_PATH + 'website\\my_sum\\static\\images\\'
 
 
 def does_symlink_exist():
