@@ -1,39 +1,17 @@
-import socket
-from http.server import BaseHTTPRequestHandler, HTTPServer
-from threading import Thread
+from unittest.mock import patch
 
-import requests
-from nose.tools import assert_true
+from nose.tools import assert_true, assert_dict_contains_subset, \
+    assert_list_equal
 
-"""
-Steps to writing a mock:
+from dev.about_mocking.mocks import get_free_port, start_mock_server
+from dev.about_mocking.services import get_users
+from unittest.mock import patch
 
-1. Subclass BaseHTTPRequestHandler from http.server module
-2. Override the HTTP function to send your response
-3. Get a free port via socket module
-4. Create an instance of HTTPServer from http.server module
-5. Create a Thread to start this HTTPServer in
-6. Make this thread as daemon so that it terminates when the main program exits
-7. Start the mock server before the test
-8. Run the test.
-"""
+from nose.tools import assert_true, assert_dict_contains_subset, \
+    assert_list_equal
 
-
-class MockServerRequestHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(requests.codes.ok)
-        self.end_headers()
-
-        return
-
-
-def get_free_port():
-    s = socket.socket(socket.AF_INET, type=socket.SOCK_STREAM)
-    s.bind(('localhost', 0))
-    address, port = s.getsockname()
-    s.close()
-
-    return port
+from dev.about_mocking.mocks import get_free_port, start_mock_server
+from dev.about_mocking.services import get_users
 
 
 class TestMockServer:
@@ -41,15 +19,16 @@ class TestMockServer:
     @classmethod
     def setup_class(cls):
         cls.mock_server_port = get_free_port()
-        cls.mock_server = HTTPServer(('localhost', cls.mock_server_port),
-                                     MockServerRequestHandler)
-
-        cls.mock_server_thread = Thread(target=cls.mock_server.serve_forever)
-        cls.mock_server_thread.setDaemon(True)
-        cls.mock_server_thread.start()
+        start_mock_server(cls.mock_server_port)
 
     def test_request_response(self):
         url = 'http://localhost:{port}/users'.format(port=self.mock_server_port)
 
-        response = requests.get(url)
+        with patch.dict('dev.about_mocking.services.__dict__',
+                        {'USERS_URL': url}):
+            response = get_users()
+
         assert_true(response.ok)
+        expected_headers = {'Content-Type': 'application/json; charset=utf-8'}
+        assert_dict_contains_subset(expected_headers, response.headers)
+        assert_list_equal(response.json(), [])
