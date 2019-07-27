@@ -4,9 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+nose = "*"
+requests = "*"
 
 [dev-packages]
 pytest = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7.3"
