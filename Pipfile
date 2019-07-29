@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 nose = "*"
 requests = "*"
+assertpy = "*"
+locustio = "*"
 
 [dev-packages]
 pytest = "*"
