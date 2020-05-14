@@ -110,3 +110,6 @@ ENV/
 
 # Pytest related files
 .pytest_cache/
+
+# Ignore jython cache
+.jython_cache
