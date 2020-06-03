@@ -12,6 +12,7 @@ ipython = "*"
 pandas = "*"
 statsmodels = "*"
 matplotlib = "*"
+pytest = "*"
 
 [dev-packages]
 pytest = "*"
